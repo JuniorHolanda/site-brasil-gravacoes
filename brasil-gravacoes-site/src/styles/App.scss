@@ -1,0 +1,52 @@
+
+@use 'reset';
+@use './variables' as var;
+@use './components/main-header';
+
+
+html {
+    height: 100vh;
+    scroll-behavior: smooth; //rola suavemente ao clicar em âncoras
+    -webkit-font-smoothing: antialiased; //suavização de fontes em navegadores webkit
+    
+    // trilho da barra de rolagem
+    ::-webkit-scrollbar {
+        width: 8px;
+        background-color: var.$highlight-color;
+    }
+    // controlador da barra de rolagem
+    ::-webkit-scrollbar-thumb {
+        background-color:var.$secondary-color;
+        
+        
+        &:hover{
+            background-color: var.$primary-color;
+        }
+    }
+    
+    //esses estados da tag 'a' são estilizados via mixin, devido as diferentes cores de background
+    a:visited, a:active, a:link, a:hover {
+        color: inherit;
+    }
+    
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: var.$secundary-font;
+
+        #root{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            overflow: hidden;
+
+            .main{
+                width: 100%;
+                height: 200vh;
+                background-color: var.$semi-white-color;
+            }
+        }
+    }
+}

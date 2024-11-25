@@ -1,0 +1,114 @@
+@use '../variables' as var;
+@use '../mixins' as mixin;
+
+.main-header{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 20vh;
+
+
+
+    background-color: var.$highlight-color;
+    @include mixin.width-large-space(padding);
+
+    .main-header__container-logo{
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-grow: 1;
+
+        max-width: fit-content;
+        @include mixin.full-large-space(padding);
+
+        .main-header__main-logo{
+            width: clamp(150px, 15vw, 250px);
+        }
+    }
+
+    .main-header__container-hamburguer{
+        display: none;
+        flex-direction: column;
+        gap: 7px;
+
+        .item-hamburguer{
+            display: flex;
+            width: 35px;
+            height: 5px;
+            background-color: var.$secondary-color;
+        }
+    }
+
+    .main-header__nav-bar{
+        display: flex;
+        width: 100%;
+
+        .main-header__list-menu{
+            display: flex;
+            justify-content: space-between;
+
+            width: 100%;
+            
+
+            .main-header__item-menu{
+                display: flex;
+                
+                transition: .3s;
+                cursor: pointer;
+                border-bottom: solid transparent;
+                text-wrap: nowrap;
+
+
+                @include mixin.font(var.$secundary-font, clamp(.5em, 1vw, 1em), 400, var.$white-color); //font, size, weight, color 
+                
+                @include mixin.btn-space(margin);
+
+                &:hover {
+                    font-weight: 600;
+                   color: var.$thirt-color;
+                   border-bottom: solid var.$thirt-color;
+                }
+            }
+        }
+    }
+
+    //====================================TABLET============================================
+
+    @media (min-width: 250px) and (max-width: 800px) {
+
+        .main-header__container-logo{
+            max-width: 100%;
+
+        }
+
+        .main-header__container-hamburguer{
+            display: flex;
+        }
+
+        .main-header__nav-bar{
+            position: absolute;
+            flex-direction: column;
+            top: 20vh;
+            right: 0;
+            transform: translateX(100%);
+
+            height: 80vh;
+            width: 50%;
+            transition: .3s;
+            
+            .main-header__list-menu{
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+            }
+        }
+        
+        .main-header__nav-bar--active{
+            background-color: var.$highlight-color;
+            transform: translateX(0);
+        }
+    }
+}

@@ -1,0 +1,28 @@
+// mapa de bordas
+$border-map:(
+    small: 10px,
+    medium: 20px,
+    large: 60px
+);
+
+@mixin a ($size) {
+    border-width: map-get($border-map, $size);
+}
+
+.hero-banner__container-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25em;
+    height: 25em;
+    overflow: hidden;
+    border: solid red;
+    @include a(large);
+
+
+    .hero-banner__img{
+       object-fit: cover;
+       object-position: center;
+       width: 100%;
+    }
+}

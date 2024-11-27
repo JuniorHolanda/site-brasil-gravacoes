@@ -1,0 +1,30 @@
+@use '../mixins';
+@use '../variables' as var;
+
+.hero-banner{
+    @include mixins.flex-box($display: flex, $justify: center, $align: center);
+    position: relative;
+    width: 50%;
+    background-color: var.$primary-color;
+
+    .hero-banner__container-img{
+        @include mixins.flex-box($display: flex, $justify: center, $align: center);
+        width: 25em;
+        height: 25em;
+        overflow: hidden;
+        border: solid var.$secondary-color;
+        @include mixins.border-size(large);
+
+        .hero-banner__img{
+           object-fit: cover;
+           object-position: center;
+           width: 100%;
+        }
+    }
+
+    .hero-banner__title{
+        @include mixins.font(var.$primary-font, clamp(2em, 5vw, 5em), 600, var.$thirt-color);//$font, $size, $weight, $color
+        position: absolute;
+        text-wrap: nowrap;
+    }
+}

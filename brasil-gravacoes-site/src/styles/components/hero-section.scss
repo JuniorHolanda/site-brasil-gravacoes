@@ -1,0 +1,27 @@
+@use '../mixins';
+@use '../variables' as var;
+
+.hero{
+    @include mixins.flex-box ($display: flex);
+    
+    width: 100%;
+    
+    
+    .hero__cta{
+        @include mixins.flex-box ($display: flex, $direction: column);
+        @include mixins.width-large-space(padding);
+        width: 50%;
+
+        .hero__title{
+            @include mixins.font (var.$primary-font, clamp(2em, 5vw, 5em), 600, var.$secondary-color); //font, size, weight, color
+
+            .hero__strong{
+                color: var.$thirt-color;
+            }
+        }
+
+        .hero__link{
+            @include mixins.flex-box()
+        }
+    }
+}

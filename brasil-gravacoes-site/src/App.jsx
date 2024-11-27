@@ -1,11 +1,15 @@
-import Header from "./components/main-header.jsx"
+import Header from './components/MainHeader.jsx'
+import Hero from "./components/HeroSection.jsx"
 
 function App() {
 
     return (
-        <div className="main">
-            <Header/>
-        </div>
+        <>
+            <Header />
+            <main className="main">
+                <Hero />
+            </main>
+        </>
   )
 }
 

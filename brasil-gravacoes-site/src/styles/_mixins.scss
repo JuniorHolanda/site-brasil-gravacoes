@@ -1,0 +1,47 @@
+@mixin flex-box ($display:null, $direction:null, $justify:null, $align:null) {
+    $properties: (
+        display: $display,
+        flex-direction: $direction,
+        justify-content: $justify,
+        align-items: $align
+    );
+
+    @each $property, $value in $properties {
+        @if $value != null {
+            #{$property}: $value;
+        }
+    }
+}
+
+// mapa de bordas
+$border-map:(
+    small: 1em,
+    medium: 2em,
+    large: 3em
+);
+
+@mixin border-size ($size) {
+    border-width: map-get($border-map, $size );
+}
+
+//fonts
+@mixin font ($font, $size, $weight, $color ) {
+    font-family: $font;
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+}
+
+//espaçamentos
+@mixin full-large-space ($property) {
+    #{$property}: 30px;
+}
+
+//usado nas laterais das sessões
+@mixin width-large-space ($property) {
+    #{$property}: 0 clamp(30px, 5vw, 100px);
+}
+
+@mixin btn-space ($property) {
+    #{$property}: 10px;
+}

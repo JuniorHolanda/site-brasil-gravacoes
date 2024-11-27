@@ -1,7 +1,8 @@
 
 @use 'reset';
 @use './variables' as var;
-@use './components/main-header';
+@use 'mixins';
+
 
 
 html {
@@ -30,15 +31,11 @@ html {
     }
     
     body {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        font-family: var.$secundary-font;
+        @include mixins.flex-box ($display: flex, $direction: column, $align: center );
+        font-family: var.$secondary-font;
 
         #root{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            @include mixins.flex-box ($display: flex, $direction: column, $align: center );
             width: 100%;
             overflow: hidden;
 

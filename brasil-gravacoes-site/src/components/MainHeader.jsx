@@ -1,5 +1,6 @@
 import MainLogo from '../img/misc/main-logo.svg';
 import { useState } from 'react';
+import '../styles/components/Main-header.scss'
 
 
 function MainHeader() {

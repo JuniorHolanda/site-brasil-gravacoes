@@ -3,25 +3,38 @@
 
 .hero{
     @include mixins.flex-box ($display: flex);
-    
     width: 100%;
-    
     
     .hero__cta{
         @include mixins.flex-box ($display: flex, $direction: column);
-        @include mixins.width-large-space(padding);
+        padding: var.$page-space;
+        gap: 30px;
         width: 50%;
+        background-color: var.$white-color;
 
         .hero__title{
-            @include mixins.font (var.$primary-font, clamp(2em, 5vw, 5em), 600, var.$secondary-color); //font, size, weight, color
+            @include mixins.font ($font: var.$primary-font, $size: clamp(2em, 5vw, 5em), $weight: 600, $space: 3px, $color: var.$secondary-color);
+
 
             .hero__strong{
                 color: var.$thirt-color;
+                text-decoration: underline;
             }
         }
 
         .hero__link{
-            @include mixins.flex-box()
+            @include mixins.flex-box($display: flex, $justify: center, $align: center );
+            @include mixins.border-size(medium, var.$secondary-color);
+            @include mixins.font ($font: var.$secondary-font, $size: clamp(1em, 1vw, 2em), $weight: 600, $color: var.$secondary-color);
+            padding: var.$small-space;
+            gap: var.$small-space;
+            width: fit-content;
+            transition: .3s;
+
+            &:hover{
+                color: var.$highlight-color;
+                border-color: var.$highlight-color;
+            }
         }
     }
 }

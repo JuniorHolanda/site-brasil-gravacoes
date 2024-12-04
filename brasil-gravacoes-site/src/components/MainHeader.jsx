@@ -1,4 +1,4 @@
-import MainLogo from '../img/misc/main-logo.svg';
+//import MainLogo from '/public/img/misc/main-logo.svg';
 import { useState } from 'react';
 import '../styles/components/Main-header.scss'
 
@@ -16,7 +16,7 @@ function MainHeader() {
     return (
         <header className="main-header">
             <div className="main-header__container-logo">
-                <img className='main-header__main-logo' src={MainLogo} alt="Logo da empresa Brasil Gravações" />
+                <img className='main-header__main-logo' src='/public/img/misc/main-logo.svg' alt="Logo da empresa Brasil Gravações" />
             </div>
 
             <span className="main-header__container-hamburguer" onClick={showMenuHamburguer}>

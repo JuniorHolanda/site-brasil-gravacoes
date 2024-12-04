@@ -1,0 +1,145 @@
+@use '../mixins';
+@use '../variables' as var;
+@use '../animation' as anime ;
+
+.card-services{
+    @include mixins.flex-box($display: flex, $direction: column, $justify: space-between);
+    gap: var.$medium-space;
+    padding: var.$medium-space;
+    background-color: var.$white-color;
+    flex: 1 1 calc(20% - var.$large-space);
+    height: 444px;
+    max-width: 550px;
+    transition: .3s;
+    
+    &:hover{
+        flex: 1 1 calc(30% - var.$large-space);
+       
+    }
+    .card-services__header{
+        @include mixins.font($font: var.$secondary-font, $size: clamp(.5em, .7vw, 1em), $weight: 600, $space: 5px, $color: var.$highlight-color);
+    }
+    
+    
+    .card-services__container-images{
+        display: flex;
+        width: 100%;
+        height: 50%;
+        gap: 10px;
+        overflow: hidden;
+        
+        .card-services__container-main{
+            display: flex;
+            overflow: hidden;
+            flex-grow: 1;
+            height: 100%;
+
+            .card-services__main-img{
+                width: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+
+        .card-services__container-gallery{
+            display: flex;
+            flex-direction: column;
+            max-width: 40%;
+            height: 100%;
+            gap: 10px;
+    
+            .card-services__container-secondary-img{
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+                opacity: 0;
+                animation: fade-in-left .5s ease-in-out forwards;
+                
+                .card-services__secondary-img{
+                    object-fit: cover;
+                    object-position: center;
+                    width: 100%;
+                    height: 100%;                    
+                }
+            }
+            
+            .card-services__container-secondary-img:nth-child(2){
+                animation: fade-in-left .7s ease-in-out forwards; 
+            }
+        }
+    }
+    .card-services__container-text{
+        // @include mixins.flex-box($display: flex, $justify: center, $align: center);
+
+        display: flex;
+        align-items: center;
+        
+        .card-services__title{
+            @include mixins.flex-box($display: flex, $align: center);
+            @include mixins.font($font: var.$primary-font, $size: clamp(.1em, 1.2vw, 2em), $weight: 600, $space: 10px, $color: var.$highlight-color);
+
+            width: 60%;
+            height: 100%;
+        }
+        
+        .card-services__text{
+            @include mixins.flex-box($display: flex, $align: center);
+            width: 40%;
+            height: 100%;
+            text-align: end;
+            align-self: flex-end;
+            @include mixins.font($font: var.$secondary-font, $size: clamp(.5em, .5vw, 1em), $weight: 600, $color: var.$black-color);
+        }
+    }
+    
+    .card-services__container-info{
+        @include mixins.flex-box($display: flex, $justify: space-between);
+        @include mixins.font($font: var.$secondary-font, $size: clamp(.5em, .5vw, 1em), $weight: 600, $color: var.$black-color);
+        gap: var.$large-space;
+        text-align: end;        
+        
+        .card-services__info:nth-child(1) {
+            animation: fade-in-bottom .3s ease-in-out forwards;
+            text-align: start;
+        }        
+        .card-services__info:nth-child(2) {
+            animation: fade-in-bottom .5s ease-in-out forwards;
+        }        
+        .card-services__info:nth-child(3) {
+            animation: fade-in-bottom .7s ease-in-out forwards;
+          }        
+    }
+
+    .card-services__container-btn{
+        @include mixins.flex-box($display: flex, $justify: space-between, $align: center);
+        @include mixins.font($font: var.$secondary-font, $size: clamp(.5em, .5vw, 1em), $weight: 600, $space: 2px, $color: var.$secondary-color);
+        border-top: solid .3em var.$secondary-color;
+        padding: var.$medium-space 0;
+        
+        .card-service__link{
+            @include mixins.flex-box($display: flex, $justify: center, $align: center);
+            gap: var.$small-space;
+        }
+        .card-service__link-form{
+            padding: var.$small-space;
+            background-color: var.$secondary-color;
+            transition: .3s;
+            color: var.$white-color;
+            
+            &:hover{
+                background-color: var.$highlight-color;
+            }
+        }
+        .card-service__link-modal{  
+            padding: var.$small-space;
+            transition: .3s;
+            border-bottom: solid .3em transparent;
+            &:hover{
+                color: var.$highlight-color;
+                border-bottom: solid .3em;
+
+            }
+        }
+    }
+
+}

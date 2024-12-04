@@ -1,3 +1,5 @@
+@use 'variables' as var;
+
 @mixin flex-box ($display:null, $direction:null, $justify:null, $align:null) {
     $properties: (
         display: $display,
@@ -15,33 +17,29 @@
 
 // mapa de bordas
 $border-map:(
-    small: 1em,
-    medium: 2em,
+    small: .3em,
+    medium: 1em,
     large: 3em
 );
 
-@mixin border-size ($size) {
-    border-width: map-get($border-map, $size );
+// borda recebe uma chave small, medium ou large e mapeia no border-map 
+@mixin border-size ($size, $color) {
+    border: map-get($border-map, $size) solid $color;
 }
 
 //fonts
-@mixin font ($font, $size, $weight, $color ) {
-    font-family: $font;
-    font-size: $size;
-    font-weight: $weight;
-    color: $color;
-}
+@mixin font($font: null, $size: null, $weight: null, $space: null, $color: null) {
+    $properties: (
+        font-family: $font,
+        font-size: $size,
+        font-weight: $weight,
+        letter-spacing:$space,
+        color: $color,
+    );
 
-//espaçamentos
-@mixin full-large-space ($property) {
-    #{$property}: 30px;
-}
-
-//usado nas laterais das sessões
-@mixin width-large-space ($property) {
-    #{$property}: 0 clamp(30px, 5vw, 100px);
-}
-
-@mixin btn-space ($property) {
-    #{$property}: 10px;
+    @each $property, $value in $properties {
+        @if $value != null {
+            #{$property}: $value;
+        }
+    }
 }

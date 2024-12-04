@@ -1,4 +1,4 @@
-import listImgBannerHero from '../img/hero-banner/listImgBannerHero'
+//import listImgBannerHero from '../img/hero-banner/listImgBannerHero'
 import '../styles/components/hero-banner.scss'
 
 function HeroBanner() {
@@ -6,7 +6,7 @@ function HeroBanner() {
     return (
         <div className="hero-banner">
             <div className="hero-banner__container-img">
-                <img className='hero-banner__img' src={listImgBannerHero[3]} alt="" />
+                <img className='hero-banner__img' src='/public/img/hero-banner/4.jpg' alt="" />
             </div>
             <h2 className='hero-banner__title'>SILK SCREEN</h2>
         </div>

@@ -3,11 +3,20 @@ $primary-font: "Notable", serif;
 $secondary-font: "Lexend Zetta", serif;
 
 // colors
-$primary-color: #00A6A7;
-$secondary-color: #25528D;
+$primary-color: #91E9F2;
+$secondary-color: #5852F2;
 $highlight-color: #E8397B;
 $thirt-color: #F2AE2C;
 $fourth-color: #EF7A36;
 
 $white-color: #fff;
-$semi-white-color: #ececec
+$semi-white-color: #ececec;
+
+$black-color: rgb(31, 31, 31);
+
+//space
+$small-space: clamp(5px, 1vw, 7.5px);
+$medium-space: clamp(7.5px, 2vw, 15px);
+$large-space: clamp(15px, 3vw, 30px);
+$page-space: 30px clamp(30px, 5vw, 100px);
+

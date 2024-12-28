@@ -5,7 +5,7 @@
     @include mixins.flex-box($display: flex);
     flex-wrap: wrap; 
     padding: var.$page-space;
-    gap: var.$large-space;
     width: 100%;
     background-color: var.$secondary-color;
+    gap: 60px;
 }

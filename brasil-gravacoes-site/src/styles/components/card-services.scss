@@ -4,53 +4,70 @@
 
 .card-services{
     @include mixins.flex-box($display: flex, $direction: column, $justify: space-between);
-    gap: var.$medium-space;
-    padding: var.$medium-space;
-    background-color: var.$white-color;
     flex: 1 1 calc(20% - var.$large-space);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+
+    padding: var.$medium-space;
+       
     height: 444px;
     max-width: 550px;
+    min-width: 200px;
+    
+    background-color: var.$white-color;
     transition: .3s;
+    
+
     
     &:hover{
         flex: 1 1 calc(30% - var.$large-space);
        
     }
     .card-services__header{
-        @include mixins.font($font: var.$secondary-font, $size: clamp(.5em, .7vw, 1em), $weight: 600, $space: 5px, $color: var.$highlight-color);
+        @include mixins.font($font: var.$secondary-font, $size: clamp(.5em, .7vw, 1em), $weight: 600, $space: clamp(0px, 0.3vw, 5px), $color: var.$highlight-color);
+        order: 1;
+        height: fit-content ;
+
+        @include mixins.media(tablet){
+            align-self: center;
+        }
     }
     
     
     .card-services__container-images{
-        display: flex;
+        @include mixins.flex-box($display: flex);
+        gap: 10px;
+        order: 2;
+        
         width: 100%;
         height: 50%;
-        gap: 10px;
+        
         overflow: hidden;
         
         .card-services__container-main{
-            display: flex;
-            overflow: hidden;
+            @include mixins.flex-box($display: flex);
             flex-grow: 1;
             height: 100%;
+            overflow: hidden;
 
             .card-services__main-img{
-                width: 100%;
                 object-fit: cover;
                 object-position: center;
+                width: 100%;
             }
         }
 
         .card-services__container-gallery{
-            display: flex;
-            flex-direction: column;
+            @include mixins.flex-box($display: flex, $direction: column);
+            gap: 10px;
             max-width: 40%;
             height: 100%;
-            gap: 10px;
     
             .card-services__container-secondary-img{
+                display: flex;
                 width: 100%;
-                height: 100%;
+                height: auto;
                 overflow: hidden;
                 opacity: 0;
                 animation: fade-in-left .5s ease-in-out forwards;
@@ -59,62 +76,109 @@
                     object-fit: cover;
                     object-position: center;
                     width: 100%;
-                    height: 100%;                    
                 }
             }
             
             .card-services__container-secondary-img:nth-child(2){
-                animation: fade-in-left .7s ease-in-out forwards; 
+                animation: fade-in-left .7s ease-in-out forwards;
+                height:90%;
+
             }
         }
     }
-    .card-services__container-text{
-        // @include mixins.flex-box($display: flex, $justify: center, $align: center);
 
-        display: flex;
-        align-items: center;
-        
+    .card-services__container-text{
+        order: 3;
+        @include mixins.flex-box($display: flex, $align: center);
+        height: fit-content;
+
+        @include mixins.media(tablet){
+            letter-spacing: 5px;
+
+            @include mixins.media(tablet){
+                flex-direction: column;
+                text-align: center;
+                letter-spacing: 5px;
+                gap: var.$small-space;
+            }
+        }
+
         .card-services__title{
             @include mixins.flex-box($display: flex, $align: center);
-            @include mixins.font($font: var.$primary-font, $size: clamp(.1em, 1.2vw, 2em), $weight: 600, $space: 10px, $color: var.$highlight-color);
+            @include mixins.font($font: var.$primary-font, $size: clamp(1em, 1.2vw, 2em), $weight: 600, $space: clamp(0px, 2vw, 8px), $color: var.$highlight-color);
 
             width: 60%;
             height: 100%;
+
+            @include mixins.media(tablet){
+                justify-content: center;
+            }
         }
         
         .card-services__text{
             @include mixins.flex-box($display: flex, $align: center);
+            @include mixins.font($font: var.$secondary-font, $size: clamp(.5em, .5vw, 1em), $weight: 600, $space: 0px, $color: var.$black-color);
+
+            align-self: flex-end;
             width: 40%;
             height: 100%;
-            text-align: end;
-            align-self: flex-end;
-            @include mixins.font($font: var.$secondary-font, $size: clamp(.5em, .5vw, 1em), $weight: 600, $color: var.$black-color);
+
+            @include mixins.media(tablet){
+                align-self: center;
+                width: 100%;
+            }
         }
     }
     
     .card-services__container-info{
+        order: 4;
         @include mixins.flex-box($display: flex, $justify: space-between);
         @include mixins.font($font: var.$secondary-font, $size: clamp(.5em, .5vw, 1em), $weight: 600, $color: var.$black-color);
+        line-height: 15px;
+
         gap: var.$large-space;
         text-align: end;        
         
         .card-services__info:nth-child(1) {
+            @include mixins.font($weight: 900, $color: var.$secondary-color);
             animation: fade-in-bottom .3s ease-in-out forwards;
             text-align: start;
+            
+            .card-services__strong {
+                background-color: #81a841;
+                color: #ffffff;
+                display: flex;
+                padding: 3px;
+            }
         }        
         .card-services__info:nth-child(2) {
+            @include mixins.font($weight: 200, $color: var.$medium-white-color);
             animation: fade-in-bottom .5s ease-in-out forwards;
+            
         }        
         .card-services__info:nth-child(3) {
+            @include mixins.font($weight: 200, $color: var.$medium-white-color);
             animation: fade-in-bottom .7s ease-in-out forwards;
+
+            .card-services__span-italic{
+                font-size: clamp(.3em, 1vw, .7em);
+                font-style: italic;
+
+            }
+
           }        
     }
 
     .card-services__container-btn{
+        height: fit-content;
+        order: 5;
         @include mixins.flex-box($display: flex, $justify: space-between, $align: center);
         @include mixins.font($font: var.$secondary-font, $size: clamp(.5em, .5vw, 1em), $weight: 600, $space: 2px, $color: var.$secondary-color);
+
+        padding-top: var.$medium-space;
         border-top: solid .3em var.$secondary-color;
-        padding: var.$medium-space 0;
+
+       
         
         .card-service__link{
             @include mixins.flex-box($display: flex, $justify: center, $align: center);
@@ -122,9 +186,10 @@
         }
         .card-service__link-form{
             padding: var.$small-space;
-            background-color: var.$secondary-color;
             transition: .3s;
+
             color: var.$white-color;
+            background-color: var.$secondary-color;
             
             &:hover{
                 background-color: var.$highlight-color;
@@ -141,5 +206,15 @@
             }
         }
     }
+}
 
+.card-services__star{
+    order: 6;
+    width: 60%;
+    bottom: -10%;
+    left: -20%;
+    position: absolute;
+    z-index: -1;
+    opacity: 0.3;
+    animation: shake 5s ease-in-out  infinite alternate;
 }

@@ -1,6 +1,7 @@
 import Header from './components/MainHeader.jsx';
 import Hero from "./components/HeroSection.jsx";
 import Services from './components/ServicesSection.jsx';
+import AboutUs from './components/AboutUsSection.jsx';
 
 function App() {
 
@@ -10,6 +11,7 @@ function App() {
             <main className="main">
                 <Hero />
                 <Services />
+                <AboutUs />
             </main>
         </>
     )

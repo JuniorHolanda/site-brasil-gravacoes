@@ -33,11 +33,11 @@ function CardServices() {
                 {expandCard && (
                     <div className='card-services__container-gallery'>
                         <div className="card-services__container-secondary-img">
-                            <img className='card-services__secondary-img' src={`/public/img/card-services/silkscreen/1.jpg`} alt="" />
+                            <img className='card-services__secondary-img' src={`/public/img/card-services/silkscreen/2.jpg`} alt="" />
                         </div>
 
                         <div className="card-services__container-secondary-img">
-                            <img className='card-services__secondary-img' src={`/public/img/card-services/silkscreen/1.jpg`} alt="" />
+                            <img className='card-services__secondary-img' src={`/public/img/card-services/silkscreen/3.jpg`} alt="" />
                         </div> 
                     </div> 
                 )}
@@ -50,9 +50,9 @@ function CardServices() {
             </div>
             {expandCard && (
                     <div className='card-services__container-info'>
-                        <p className='card-services__info'>Preços a partir de R$ 160,00</p>
+                        <p className='card-services__info'>Preços a partir de <br /> <strong className="card-services__strong">R$ 160,00</strong></p>
                         <p className='card-services__info'>Trabalhamos com Pantone</p>
-                        <p className='card-services__info'>prazos a partir de 5 dias, negociável</p>
+                        <p className='card-services__info'>prazos a partir de 5 dias, <br/> <span className="card-services__span-italic">NEGOCIÁVEL</span></p>
                     </div> 
                     
                 )}
@@ -60,6 +60,10 @@ function CardServices() {
                 <a className='card-service__link card-service__link-form' href="/"><i className="card-service__link fa-solid fa-table-list">ORÇAMENTO</i></a>
                 <a className='card-service__link card-service__link-modal' href="/"><i className="card-service__link fa-solid fa-eye">SABER MAIS</i></a>
             </div>
+
+            {expandCard && (
+                <img className='card-services__star' src='../public/img/misc/star.svg' alt='Uma estrela de 8 pontas'></img> 
+            )}
         </div>
     );
 }

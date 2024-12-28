@@ -1,4 +1,5 @@
 @use 'variables' as var;
+@use 'sass:map';
 
 @mixin flex-box ($display:null, $direction:null, $justify:null, $align:null) {
     $properties: (
@@ -16,15 +17,15 @@
 }
 
 // mapa de bordas
-$border-map:(
+$border-map: (
     small: .3em,
     medium: 1em,
     large: 3em
 );
 
 // borda recebe uma chave small, medium ou large e mapeia no border-map 
-@mixin border-size ($size, $color) {
-    border: map-get($border-map, $size) solid $color;
+@mixin border-size($size, $color) {
+    border: map.get($border-map, $size) solid $color;
 }
 
 //fonts
@@ -41,5 +42,21 @@ $border-map:(
         @if $value != null {
             #{$property}: $value;
         }
+    }
+}
+
+//medias
+
+$media-map:(
+    tv: 1200px,
+    desktop:1024px,
+    tablet:600px,
+    smartphone:150px,
+);
+
+@mixin media($device) {
+    $breakpoint: map.get($media-map, $device);
+    @media (max-width: $breakpoint) {
+        @content;
     }
 }

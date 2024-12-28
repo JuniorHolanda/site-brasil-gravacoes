@@ -13,7 +13,7 @@
         background-color: var.$white-color;
 
         .hero__title{
-            @include mixins.font ($font: var.$primary-font, $size: clamp(2em, 5vw, 5em), $weight: 600, $space: 3px, $color: var.$secondary-color);
+            @include mixins.font ($font: var.$primary-font, $size: clamp(2em, 5vw, 5em), $weight: 600, $space: 15px, $color: var.$secondary-color);
 
 
             .hero__strong{

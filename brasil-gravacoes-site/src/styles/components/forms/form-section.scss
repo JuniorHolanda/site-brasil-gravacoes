@@ -1,0 +1,10 @@
+@use '../../mixins';
+@use '../../variables' as var;
+
+.form{
+  @include mixins.flex-box($display: flex, $justify: center, $align: center);
+  width: 100%;
+  height: 100vh;
+  background-color: var.$white-color;
+  padding: var.$page-space;
+}

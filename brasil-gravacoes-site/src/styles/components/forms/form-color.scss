@@ -1,0 +1,128 @@
+@use '../../mixins';
+@use '../../variables' as var;
+
+.form__color{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    
+    gap: var.$medium-space;
+    padding: var.$large-space;
+    width: 300px;
+    height: 360px;
+
+    background-color: #3838a5;
+
+    .form__container-title{
+        z-index: 4;
+        @include mixins.font($size: 1.5rem, $color: var.$white-color);
+        text-wrap: nowrap;
+        display: block;
+        padding: var.$medium-space;
+        background-color: var.$black-color;
+    }
+    
+    .form__camp{
+        z-index: 3;
+        display: grid;
+        grid-template: 1fr 1fr / 80% auto;
+        width: 100%;
+        
+        label{
+            @include mixins.flex-box($display: flex);
+            //$font, $size, $weight, $space, $color
+            @include mixins.font($font: var.$secondary-font, $size: 1.5rem, $weight: 900, $space: 7px, $color: var.$black-color);
+            grid-area: 1 / 1 / 2 / 3;
+            
+        }
+
+        input {
+            //$font, $size, $weight, $space, $color
+            @include mixins.font($font: var.$secondary-font, $size: clamp(.5em, 1vw, 1em), $color: var.$black-color);
+            display: flex;
+            grid-area: 2 / 1 / 3 / 2;
+            padding: var.$small-space;
+            width: 100%;
+        }
+
+        button{
+            @include mixins.font($size: clamp(1rem, 3vw, 3rem), $color: var.$white-color);
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            grid-area: 2 / 2 / 3 / 3;
+            background-color: transparent;
+        }
+    }
+
+    .form__info{
+        z-index: 2;
+        display: block;
+        width: 100%;
+
+
+        .form__list{
+            @include mixins.flex-box($display: flex, $justify: space-between, $align: center);
+            
+            gap: var.$small-space;
+            @include mixins.font($size: clamp(.5em, .5vw, 1em), $color: var.$white-color);
+
+            .form__item-list{
+                display: block;
+                padding: var.$small-space;
+                background-color: var.$black-color;
+            }
+
+            :last-child{
+
+                background-color: var.$white-color;
+                color: var.$black-color;
+                display: flex;
+                justify-self: end;
+                align-self: flex-end;
+            }
+        }
+    }
+    /*============efeito e gradienter líquido===================*/
+    
+    .form__background{
+        position: absolute;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+    .form__liquid-gradient{
+        position: absolute;
+        display: flex;
+        transition: 1s;
+    }
+    
+    
+    // $width, $height, $top, $left, $background-color, $filter, $index
+    .form__bg-1{
+        @include mixins.liquid-gradient(300px, 500px, -100px, -100px, #3700ff, blur(25px), -2);
+        mix-blend-mode: soft-light;
+        padding: 150px;
+    }
+    .form__bg-2{
+        @include mixins.liquid-gradient(100px, 100px, 30px, 100px, #ff0505, blur(50px), -12);
+    }
+    .form__bg-3{
+        @include mixins.liquid-gradient(90px, 1000px, -100px, -300px, #ffffff, blur(25px), 4);
+        transform: rotate(45deg);
+    }
+    .form__bg-4{
+        @include mixins.liquid-gradient(600px, 400px, 110px, 20px, #00ffbf, blur(90px), -3);
+        transition: 1s;
+    }
+    
+    .form__bg-5{
+        @include mixins.liquid-gradient(900px, 900px, -800px, 0px, #ff0022, blur(25px), 20);
+        mix-blend-mode: difference;
+    }
+  
+}

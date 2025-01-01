@@ -8,6 +8,7 @@
     align-items: center;
     overflow: hidden;
     position: relative;
+    z-index: 1;
     
     gap: var.$medium-space;
     padding: var.$large-space;
@@ -19,56 +20,46 @@
     .form__container-title{
         z-index: 4;
         @include mixins.font($size: 1.5rem, $color: var.$white-color);
-        text-wrap: nowrap;
         display: block;
         padding: var.$medium-space;
+        width: 100%;
+        text-wrap: nowrap;
         background-color: var.$black-color;
     }
-    
-    .form__camp{
-        z-index: 3;
-        display: grid;
-        grid-template: 1fr 1fr / 80% auto;
-        width: 100%;
-        
-        label{
-            @include mixins.flex-box($display: flex);
-            //$font, $size, $weight, $space, $color
-            @include mixins.font($font: var.$secondary-font, $size: 1.5rem, $weight: 900, $space: 7px, $color: var.$black-color);
-            grid-area: 1 / 1 / 2 / 3;
-            
-        }
 
-        input {
-            //$font, $size, $weight, $space, $color
-            @include mixins.font($font: var.$secondary-font, $size: clamp(.5em, 1vw, 1em), $color: var.$black-color);
-            display: flex;
-            grid-area: 2 / 1 / 3 / 2;
-            padding: var.$small-space;
-            width: 100%;
-        }
+    .form__camp{
+        display: flex;
+        gap: var.$small-space;
 
         button{
-            @include mixins.font($size: clamp(1rem, 3vw, 3rem), $color: var.$white-color);
+            @include mixins.font($size: clamp(1rem, 4vw, 4rem), $color: var.$fourth-color);
             display: flex;
-            justify-content: end;
+            justify-content: center;
             align-items: center;
-            grid-area: 2 / 2 / 3 / 3;
-            background-color: transparent;
+            transition: .3s;
+            background-color: var.$highlight-color;
+            cursor: pointer;
+    
+            &:hover{
+                color: var.$thirt-color;
+            }
         }
-    }
+        }
+
 
     .form__info{
         z-index: 2;
-        display: block;
+        @include mixins.flex-box($display: flex);
+        flex-direction: column;
+        gap: var.$small-space;
         width: 100%;
 
 
         .form__list{
-            @include mixins.flex-box($display: flex, $justify: space-between, $align: center);
+            @include mixins.flex-box($display: flex, $justify: start, $align: center);
             
             gap: var.$small-space;
-            @include mixins.font($size: clamp(.5em, .5vw, 1em), $color: var.$white-color);
+            @include mixins.font($size: clamp(.5em, .7vw, 1em), $color: var.$white-color);
 
             .form__item-list{
                 display: block;
@@ -93,7 +84,7 @@
         display: flex;
         width: 100%;
         height: 100%;
-        z-index: 1;
+        z-index: -1;
     }
     .form__liquid-gradient{
         position: absolute;

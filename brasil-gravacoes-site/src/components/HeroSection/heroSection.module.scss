@@ -1,28 +1,28 @@
-@use '../mixins';
-@use '../variables' as var;
+@use '../../styles/mixins';
+@use '../../styles/variables' as var;
 
 .hero{
     @include mixins.flex-box ($display: flex);
     width: 100%;
     
-    .hero__cta{
+    .cta{
         @include mixins.flex-box ($display: flex, $direction: column);
         padding: var.$page-space;
         gap: 30px;
         width: 50%;
         background-color: var.$white-color;
 
-        .hero__title{
+
+        h1{
             @include mixins.font ($font: var.$primary-font, $size: clamp(2em, 5vw, 5em), $weight: 600, $space: 15px, $color: var.$secondary-color);
 
-
-            .hero__strong{
+            strong{
                 color: var.$thirt-color;
                 text-decoration: underline;
             }
         }
 
-        .hero__link{
+        a{
             @include mixins.flex-box($display: flex, $justify: center, $align: center );
             @include mixins.border-size(medium, var.$secondary-color);
             @include mixins.font ($font: var.$secondary-font, $size: clamp(1em, 1vw, 2em), $weight: 600, $color: var.$secondary-color);

@@ -1,29 +1,28 @@
-@use '../mixins';
-@use '../variables' as var;
+@use '../../../styles/mixins';
+@use '../../../styles/variables' as var;
 
-.hero-banner{
+.banner{
     @include mixins.flex-box($display: flex, $justify: center, $align: center);
     position: relative;
     width: 50%;
     background-color: var.$primary-color;
 
-    .hero-banner__container-img{
+    div{
         @include mixins.flex-box($display: flex, $justify: center, $align: center);
         @include mixins.border-size(large, var.$secondary-color);
         width: 25em;
         height: 25em;
         overflow: hidden;
 
-
-        .hero-banner__img{
+        img{
            object-fit: cover;
            object-position: center;
            width: 100%;
-           height: 100%
+           height: 100%;
         }
     }
 
-    .hero-banner__title{
+    h2{
         @include mixins.font($font: var.$primary-font, $size: clamp(2em, 5vw, 5em), $weight: 600, $space: 3px, $color: var.$thirt-color);//$font, $size, $weight, $color
         position: absolute;
         text-wrap: nowrap;

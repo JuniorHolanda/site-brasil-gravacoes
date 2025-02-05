@@ -1,0 +1,37 @@
+[
+  {
+    "serviceTagLine": "Cores Vibrantes",
+    "mainImg": "https://res.cloudinary.com/di2fhqyis/image/upload/v1738711971/1_z5twom.jpg",
+    "secondImg": "https://res.cloudinary.com/di2fhqyis/image/upload/v1738711971/2_qxsbf4.jpg",
+    "thirdImg": "https://res.cloudinary.com/di2fhqyis/image/upload/v1738711971/3_zoeaej.jpg",
+    "title": "Silk Screen",
+    "price": 160,
+    "description": "perfeito para camisetas, brindes e materiais promocionais",
+    "details": "Trabalhamos com Pantone",
+    "deliveryTime": "5 dias uteis"
+  },
+
+  {
+    "serviceTagLine": "Acabamento Impecável",
+    "mainImg": "https://res.cloudinary.com/di2fhqyis/image/upload/v1738712916/2_j40l0e.jpg",
+    "secondImg": "https://res.cloudinary.com/di2fhqyis/image/upload/v1738713168/2_k7ukja.jpg",
+    "thirdImg": "https://res.cloudinary.com/di2fhqyis/image/upload/v1738713168/3_xrtkqw.jpg",
+    "title": "Laser Co²",
+    "price": 160,
+    "description": "Personalize madeira, couro e sintéticos com gravação nítida e durável",
+    "detais": "precisão milimétrica",
+    "deliveryTime": "5 dias uteis"
+  },
+
+  {
+    "serviceTagLine": "Detalhes que duram para sempre",
+    "mainImg": "https://res.cloudinary.com/di2fhqyis/image/upload/v1738715439/1_g6ib1z.jpg",
+    "secondImg": "https://res.cloudinary.com/di2fhqyis/image/upload/v1738715439/2_mkamsc.jpg",
+    "thirdImg": "https://res.cloudinary.com/di2fhqyis/image/upload/v1738715439/2_mkamsc.jpg",
+    "title": "Laser cilíndrico",
+    "price": 160,
+    "description": "Tecnologia de precisão para personalização durável, ideal para metais",
+    "detais": "Gravação profunda para maior durabilidade",
+    "deliveryTime": "5 dias uteis"
+  }
+]

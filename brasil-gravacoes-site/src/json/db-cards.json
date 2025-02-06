@@ -1,9 +1,13 @@
 [
   {
+    "cardId": "1",
     "serviceTagLine": "Cores Vibrantes",
     "mainImg": "https://res.cloudinary.com/di2fhqyis/image/upload/v1738711971/1_z5twom.jpg",
+    "mainAltImg": "Uma mão arrastando um rodo de SilkScreen",
     "secondImg": "https://res.cloudinary.com/di2fhqyis/image/upload/v1738711971/2_qxsbf4.jpg",
+    "secondAltImg": "um rodo de silk screen",
     "thirdImg": "https://res.cloudinary.com/di2fhqyis/image/upload/v1738711971/3_zoeaej.jpg",
+    "thirdAltImg": "Uma cartela pantone com diversas cores",
     "title": "Silk Screen",
     "price": 160,
     "description": "perfeito para camisetas, brindes e materiais promocionais",
@@ -12,10 +16,14 @@
   },
 
   {
+    "cardId": "2",
     "serviceTagLine": "Acabamento Impecável",
     "mainImg": "https://res.cloudinary.com/di2fhqyis/image/upload/v1738712916/2_j40l0e.jpg",
+    "mainAltImg": "Um pendrive de madeira",
     "secondImg": "https://res.cloudinary.com/di2fhqyis/image/upload/v1738713168/2_k7ukja.jpg",
+    "secondAltImg": "Uma máquina de laser cortando madeira",
     "thirdImg": "https://res.cloudinary.com/di2fhqyis/image/upload/v1738713168/3_xrtkqw.jpg",
+    "thirdAltImg": "Uma máquina de laser gravando em madeira",
     "title": "Laser Co²",
     "price": 160,
     "description": "Personalize madeira, couro e sintéticos com gravação nítida e durável",
@@ -24,14 +32,98 @@
   },
 
   {
+    "cardId": "3",
     "serviceTagLine": "Detalhes que duram para sempre",
     "mainImg": "https://res.cloudinary.com/di2fhqyis/image/upload/v1738715439/1_g6ib1z.jpg",
+    "mainAltImg": "Uma máquina de laser gravando um copo",
     "secondImg": "https://res.cloudinary.com/di2fhqyis/image/upload/v1738715439/2_mkamsc.jpg",
+    "secondAltImg": "Uma máquina de laser gravando em madeira",
     "thirdImg": "https://res.cloudinary.com/di2fhqyis/image/upload/v1738715439/2_mkamsc.jpg",
+    "thirdAltImg": "Uma máquina de laser gravando um copo",
     "title": "Laser cilíndrico",
     "price": 160,
     "description": "Tecnologia de precisão para personalização durável, ideal para metais",
     "detais": "Gravação profunda para maior durabilidade",
     "deliveryTime": "5 dias uteis"
+  },
+
+  {
+    "cardId": "41",
+    "serviceTagLine": "Corsdes Vibrantes",
+    "mainImg": "https://res.cloudinary.com/di2fhqyis/image/upload/v1738711971/1_z5twom.jpg",
+    "mainAltImg": "Uma mão arrasdstando um rodo de SilkScreen",
+    "secondImg": "https://res.cloudinary.com/di2fhqyis/image/upload/v1738711971/2_qxsbf4.jpg",
+    "secondAltImg": "um rodo de sddsilk screen",
+    "thirdImg": "https://res.cloudinary.com/di2fhqyis/image/upload/v1738711971/3_zoeaej.jpg",
+    "thirdAltImg": "Uma cartela pasdntone com diversas cores",
+    "title": "Silk Screen",
+    "price": 160,
+    "description": "perfeito parsdsda camisetas, brindes e materiais promocionais",
+    "details": "Trabalhamsdos com Pantone",
+    "deliveryTime": "5 disdas uteis"
+  },
+
+  {
+    "cardId": "41",
+    "serviceTagLine": "Corsdes Vibrantes",
+    "mainImg": "https://res.cloudinary.com/di2fhqyis/image/upload/v1738711971/1_z5twom.jpg",
+    "mainAltImg": "Uma mão arrasdstando um rodo de SilkScreen",
+    "secondImg": "https://res.cloudinary.com/di2fhqyis/image/upload/v1738711971/2_qxsbf4.jpg",
+    "secondAltImg": "um rodo de sddsilk screen",
+    "thirdImg": "https://res.cloudinary.com/di2fhqyis/image/upload/v1738711971/3_zoeaej.jpg",
+    "thirdAltImg": "Uma cartela pasdntone com diversas cores",
+    "title": "Silk Screen",
+    "price": 160,
+    "description": "perfeito parsdsda camisetas, brindes e materiais promocionais",
+    "details": "Trabalhamsdos com Pantone",
+    "deliveryTime": "5 disdas uteis"
+  },
+
+  {
+    "cardId": "41",
+    "serviceTagLine": "Corsdes Vibrantes",
+    "mainImg": "https://res.cloudinary.com/di2fhqyis/image/upload/v1738711971/1_z5twom.jpg",
+    "mainAltImg": "Uma mão arrasdstando um rodo de SilkScreen",
+    "secondImg": "https://res.cloudinary.com/di2fhqyis/image/upload/v1738711971/2_qxsbf4.jpg",
+    "secondAltImg": "um rodo de sddsilk screen",
+    "thirdImg": "https://res.cloudinary.com/di2fhqyis/image/upload/v1738711971/3_zoeaej.jpg",
+    "thirdAltImg": "Uma cartela pasdntone com diversas cores",
+    "title": "Silk Screen",
+    "price": 160,
+    "description": "perfeito parsdsda camisetas, brindes e materiais promocionais",
+    "details": "Trabalhamsdos com Pantone",
+    "deliveryTime": "5 disdas uteis"
+  },
+
+  {
+    "cardId": "41",
+    "serviceTagLine": "Corsdes Vibrantes",
+    "mainImg": "https://res.cloudinary.com/di2fhqyis/image/upload/v1738711971/1_z5twom.jpg",
+    "mainAltImg": "Uma mão arrasdstando um rodo de SilkScreen",
+    "secondImg": "https://res.cloudinary.com/di2fhqyis/image/upload/v1738711971/2_qxsbf4.jpg",
+    "secondAltImg": "um rodo de sddsilk screen",
+    "thirdImg": "https://res.cloudinary.com/di2fhqyis/image/upload/v1738711971/3_zoeaej.jpg",
+    "thirdAltImg": "Uma cartela pasdntone com diversas cores",
+    "title": "Silk Screen",
+    "price": 160,
+    "description": "perfeito parsdsda camisetas, brindes e materiais promocionais",
+    "details": "Trabalhamsdos com Pantone",
+    "deliveryTime": "5 disdas uteis"
+  },
+
+  {
+    "cardId": "41",
+    "serviceTagLine": "Corsdes Vibrantes",
+    "mainImg": "https://res.cloudinary.com/di2fhqyis/image/upload/v1738711971/1_z5twom.jpg",
+    "mainAltImg": "Uma mão arrasdstando um rodo de SilkScreen",
+    "secondImg": "https://res.cloudinary.com/di2fhqyis/image/upload/v1738711971/2_qxsbf4.jpg",
+    "secondAltImg": "um rodo de sddsilk screen",
+    "thirdImg": "https://res.cloudinary.com/di2fhqyis/image/upload/v1738711971/3_zoeaej.jpg",
+    "thirdAltImg": "Uma cartela pasdntone com diversas cores",
+    "title": "Silk Screen",
+    "price": 160,
+    "description": "perfeito parsdsda camisetas, brindes e materiais promocionais",
+    "details": "Trabalhamsdos com Pantone",
+    "deliveryTime": "5 disdas uteis"
   }
 ]

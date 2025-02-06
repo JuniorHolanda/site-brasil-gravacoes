@@ -2,7 +2,25 @@ import '../styles/components/card-services.scss';
 import { useState } from 'react';
 
 
-function CardServices() {
+function CardServices(
+    {
+        serviceTagLine,
+
+        mainImg,
+        mainAltImg,
+
+        secondImg,
+        secondAltImg,
+
+        thirdImg,
+        thirdAltImg,
+
+        title,
+        price,
+        description,
+        details,
+        deliveryTime
+    }) {
 
     
     //controlador de estado que expande ou retrai o card, somente para desktop
@@ -23,21 +41,21 @@ function CardServices() {
             onMouseLeave={() => toggleExpandCard(false)} // retrai o card
         >
             
-            <h3 className='card-services__header'>CORES VIBRANTES</h3>
+            <h3 className='card-services__header'>{serviceTagLine}</h3>
 
             <div className="card-services__container-images">
                 <div className="card-services__container-main">
-                    <img className='card-services__main-img' src={`/public/img/card-services/silkscreen/1.jpg`} alt="" />
+                    <img className='card-services__main-img' src={mainImg} alt={mainAltImg} />
                 </div>
 
                 {expandCard && (
                     <div className='card-services__container-gallery'>
                         <div className="card-services__container-secondary-img">
-                            <img className='card-services__secondary-img' src={`/public/img/card-services/silkscreen/2.jpg`} alt="" />
+                            <img className='card-services__secondary-img' src={secondImg} alt={secondAltImg} />
                         </div>
 
                         <div className="card-services__container-secondary-img">
-                            <img className='card-services__secondary-img' src={`/public/img/card-services/silkscreen/3.jpg`} alt="" />
+                            <img className='card-services__secondary-img' src={thirdImg} alt={thirdAltImg} />
                         </div> 
                     </div> 
                 )}
@@ -45,14 +63,22 @@ function CardServices() {
             </div>
 
             <div className="card-services__container-text">
-                <h2 className='card-services__title'>Silk <br />Screen</h2>
-                <p className='card-services__text'>perfeito para camisetas, brindes e materiais promocionais</p>
+                <h2 className='card-services__title'>{title}</h2>
+                <p className='card-services__text'>{description}</p>
             </div>
             {expandCard && (
                     <div className='card-services__container-info'>
-                        <p className='card-services__info'>Preços a partir de <br /> <strong className="card-services__strong">R$ 160,00</strong></p>
-                        <p className='card-services__info'>Trabalhamos com Pantone</p>
-                        <p className='card-services__info'>prazos a partir de 5 dias, <br/> <span className="card-services__span-italic">NEGOCIÁVEL</span></p>
+                        <p className='card-services__info'>
+                            Preços a partir de
+                            <br />
+                            <strong className="card-services__strong">
+                                R$ {price.toFixed(2).replace('.', ',')}
+                            </strong>
+                        </p>
+                        <p className='card-services__info'>{details}</p>
+                        <p className='card-services__info'>
+                            prazos a partir{deliveryTime},<br/>
+                            <span className="card-services__span-italic">NEGOCIÁVEL</span></p>
                     </div> 
                     
                 )}

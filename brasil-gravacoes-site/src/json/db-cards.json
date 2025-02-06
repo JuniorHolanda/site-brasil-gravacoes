@@ -27,7 +27,7 @@
     "title": "Laser Co²",
     "price": 160,
     "description": "Personalize madeira, couro e sintéticos com gravação nítida e durável",
-    "detais": "precisão milimétrica",
+    "details": "precisão milimétrica",
     "deliveryTime": "5 dias uteis"
   },
 
@@ -43,12 +43,12 @@
     "title": "Laser cilíndrico",
     "price": 160,
     "description": "Tecnologia de precisão para personalização durável, ideal para metais",
-    "detais": "Gravação profunda para maior durabilidade",
+    "details": "Gravação profunda para maior durabilidade",
     "deliveryTime": "5 dias uteis"
   },
 
   {
-    "cardId": "41",
+    "cardId": "4",
     "serviceTagLine": "Corsdes Vibrantes",
     "mainImg": "https://res.cloudinary.com/di2fhqyis/image/upload/v1738711971/1_z5twom.jpg",
     "mainAltImg": "Uma mão arrasdstando um rodo de SilkScreen",
@@ -64,7 +64,7 @@
   },
 
   {
-    "cardId": "41",
+    "cardId": "5",
     "serviceTagLine": "Corsdes Vibrantes",
     "mainImg": "https://res.cloudinary.com/di2fhqyis/image/upload/v1738711971/1_z5twom.jpg",
     "mainAltImg": "Uma mão arrasdstando um rodo de SilkScreen",
@@ -80,7 +80,7 @@
   },
 
   {
-    "cardId": "41",
+    "cardId": "6",
     "serviceTagLine": "Corsdes Vibrantes",
     "mainImg": "https://res.cloudinary.com/di2fhqyis/image/upload/v1738711971/1_z5twom.jpg",
     "mainAltImg": "Uma mão arrasdstando um rodo de SilkScreen",
@@ -96,7 +96,7 @@
   },
 
   {
-    "cardId": "41",
+    "cardId": "7",
     "serviceTagLine": "Corsdes Vibrantes",
     "mainImg": "https://res.cloudinary.com/di2fhqyis/image/upload/v1738711971/1_z5twom.jpg",
     "mainAltImg": "Uma mão arrasdstando um rodo de SilkScreen",
@@ -112,7 +112,7 @@
   },
 
   {
-    "cardId": "41",
+    "cardId": "8",
     "serviceTagLine": "Corsdes Vibrantes",
     "mainImg": "https://res.cloudinary.com/di2fhqyis/image/upload/v1738711971/1_z5twom.jpg",
     "mainAltImg": "Uma mão arrasdstando um rodo de SilkScreen",

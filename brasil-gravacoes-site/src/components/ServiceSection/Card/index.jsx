@@ -1,4 +1,4 @@
-import '../styles/components/card-services.scss';
+import styles from './cardServices.module.scss';
 import { useState } from 'react';
 
 
@@ -36,14 +36,14 @@ function CardServices(
     }
     
     return (
-        <div className="card-services"
+        <div className={styles.card}
             onMouseEnter={() => toggleExpandCard(true)} //expande o card
             onMouseLeave={() => toggleExpandCard(false)} // retrai o card
         >
             
-            <h3 className='card-services__header'>{serviceTagLine}</h3>
+            <h3 className={styles.header}>{serviceTagLine}</h3>
 
-            <div className="card-services__container-images">
+            <div className={styles.container.images}>
                 <div className="card-services__container-main">
                     <img className='card-services__main-img' src={mainImg} alt={mainAltImg} />
                 </div>

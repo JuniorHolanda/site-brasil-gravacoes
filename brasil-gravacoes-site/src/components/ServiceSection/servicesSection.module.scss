@@ -1,7 +1,7 @@
-@use '../mixins';
-@use '../variables' as var;
+@use '../../styles/mixins';
+@use '../../styles/variables' as var;
 
-.services-section {
+.services {
     @include mixins.flex-box($display: flex);
     flex-wrap: wrap; 
     padding: var.$page-space;

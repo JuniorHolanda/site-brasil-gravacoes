@@ -1,6 +1,6 @@
 import Header from './components/MainHeader.jsx';
 import Hero from './components/HeroSection';
-import Services from './components/ServicesSection.jsx';
+import Services from './components/ServiceSection';
 import AboutUs from './components/AboutUsSection.jsx';
 import FormSection from './components/forms/FormSection.jsx';
 

@@ -1,8 +1,8 @@
-@use '../mixins';
-@use '../variables' as var;
-@use '../animation' as anime ;
+@use '../../../styles/mixins';
+@use '../../../styles/variables' as var;
+@use '../../../styles/animation' as anime ;
 
-.card-services{
+.card{
     @include mixins.flex-box($display: flex, $direction: column, $justify: space-between);
     flex: 1 1 calc(20% - var.$large-space);
     position: relative;
@@ -24,7 +24,7 @@
         flex: 1 1 calc(30% - var.$large-space);
        
     }
-    .card-services__header{
+    .header{
         @include mixins.font($font: var.$secondary-font, $size: clamp(.5em, .7vw, 1em), $weight: 600, $space: clamp(0px, 0.3vw, 5px), $color: var.$highlight-color);
         order: 1;
         height: fit-content ;
@@ -35,7 +35,7 @@
     }
     
     
-    .card-services__container-images{
+    .container.images{
         @include mixins.flex-box($display: flex);
         gap: 10px;
         order: 2;

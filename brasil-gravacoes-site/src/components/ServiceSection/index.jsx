@@ -1,10 +1,10 @@
-import CardServices from './CardServices.jsx';
-import '../styles/components/services-section.scss';
-import listCard from '../json/db-cards.json';
+import CardServices from './Card/index.jsx';
+import styles from './servicesSection.module.scss' ;
+import listCard from '../../json/db-cards.json';
 function ServicesSection() {
 
   return (
-    <section className="services-section">
+    <section className={styles.services}>
       {listCard.map((card) => (
         <CardServices
           key={card.cardId}

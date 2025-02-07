@@ -1,7 +1,7 @@
 import Header from './components/MainHeader.jsx';
 import Hero from './components/HeroSection';
 import Services from './components/ServiceSection';
-import AboutUs from './components/AboutUsSection.jsx';
+import AboutUs from './components/AboutUsSection';
 import FormSection from './components/forms/FormSection.jsx';
 
 function App() {
@@ -11,8 +11,8 @@ function App() {
       <main className="main">
         <Hero />
         <Services />
-        <FormSection />
         <AboutUs />
+        <FormSection />
       </main>
     </>
   );

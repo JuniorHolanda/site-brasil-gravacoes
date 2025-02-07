@@ -43,52 +43,53 @@ function CardServices(
             
             <h3 className={styles.header}>{serviceTagLine}</h3>
 
-            <div className={styles.container.images}>
-                <div className="card-services__container-main">
-                    <img className='card-services__main-img' src={mainImg} alt={mainAltImg} />
+            <div className={styles.containerImages}>
+                <div className={styles.containerMain}>
+                    <img className={styles.mainImg} src={mainImg} alt={mainAltImg} />
                 </div>
 
                 {expandCard && (
-                    <div className='card-services__container-gallery'>
-                        <div className="card-services__container-secondary-img">
-                            <img className='card-services__secondary-img' src={secondImg} alt={secondAltImg} />
+                    <div className={styles.containerGallery}>
+                        <div className={styles.containerSecondaryImg}>
+                            <img className={styles.secondaryImg} src={secondImg} alt={secondAltImg} />
                         </div>
 
-                        <div className="card-services__container-secondary-img">
-                            <img className='card-services__secondary-img' src={thirdImg} alt={thirdAltImg} />
+                        <div className="secondary-img">
+                            <img className={styles.containerSecondaryImg} src={thirdImg} alt={thirdAltImg} />
                         </div> 
                     </div> 
                 )}
 
             </div>
 
-            <div className="card-services__container-text">
-                <h2 className='card-services__title'>{title}</h2>
-                <p className='card-services__text'>{description}</p>
+            <div className={styles.containerText}>
+                <h2 className={styles.title}>{title}</h2>
+                <p className={styles.text}>{description}</p>
             </div>
             {expandCard && (
-                    <div className='card-services__container-info'>
-                        <p className='card-services__info'>
+                    <div className={styles.containerInfo}>
+                        <p>
                             Preços a partir de
                             <br />
-                            <strong className="card-services__strong">
+                            <strong>
                                 R$ {price.toFixed(2).replace('.', ',')}
                             </strong>
                         </p>
-                        <p className='card-services__info'>{details}</p>
-                        <p className='card-services__info'>
+                        <p>{details}</p>
+                        <p>
                             prazos a partir{deliveryTime},<br/>
-                            <span className="card-services__span-italic">NEGOCIÁVEL</span></p>
+                            <span>NEGOCIÁVEL</span>
+                        </p>
                     </div> 
                     
                 )}
-            <div className="card-services__container-btn">
-                <a className='card-service__link card-service__link-form' href="/"><i className="card-service__link fa-solid fa-table-list">ORÇAMENTO</i></a>
-                <a className='card-service__link card-service__link-modal' href="/"><i className="card-service__link fa-solid fa-eye">SABER MAIS</i></a>
+            <div className={styles.containerBtn}>
+                <a className={`${styles.link} ${styles.form}`} href="/"><i className="card-service__link fa-solid fa-table-list">ORÇAMENTO</i></a>
+                <a className={`${styles.link} ${styles.modal}`} href="/"><i className="card-service__link fa-solid fa-eye">SABER MAIS</i></a>
             </div>
 
             {expandCard && (
-                <img className='card-services__star' src='../public/img/misc/star.svg' alt='Uma estrela de 8 pontas'></img> 
+                <img className={styles.star} src='../public/img/misc/star.svg' alt='Uma estrela de 8 pontas'></img> 
             )}
         </div>
     );

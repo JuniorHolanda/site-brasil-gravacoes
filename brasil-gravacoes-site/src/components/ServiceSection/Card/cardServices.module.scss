@@ -35,7 +35,7 @@
     }
     
     
-    .container.images{
+    .containerImages{
         @include mixins.flex-box($display: flex);
         gap: 10px;
         order: 2;
@@ -45,26 +45,26 @@
         
         overflow: hidden;
         
-        .card-services__container-main{
+        .containerMain{
             @include mixins.flex-box($display: flex);
             flex-grow: 1;
             height: 100%;
             overflow: hidden;
 
-            .card-services__main-img{
+            .mainImg{
                 object-fit: cover;
                 object-position: center;
                 width: 100%;
             }
         }
 
-        .card-services__container-gallery{
+        .containerGallery{
             @include mixins.flex-box($display: flex, $direction: column);
             gap: 10px;
             max-width: 40%;
             height: 100%;
     
-            .card-services__container-secondary-img{
+            .containerSecondaryImg{
                 display: flex;
                 width: 100%;
                 height: auto;
@@ -72,22 +72,22 @@
                 opacity: 0;
                 animation: fade-in-left .5s ease-in-out forwards;
                 
-                .card-services__secondary-img{
+                .secondaryImg{
                     object-fit: cover;
                     object-position: center;
                     width: 100%;
                 }
             }
-            
-            .card-services__container-secondary-img:nth-child(2){
+            //----------------------------------
+            .containerSecondaryImg:nth-child(2){
                 animation: fade-in-left .7s ease-in-out forwards;
                 height:90%;
-
             }
+            //------------------------------------
         }
     }
 
-    .card-services__container-text{
+    .containerText{
         order: 3;
         @include mixins.flex-box($display: flex, $align: center);
         height: fit-content;
@@ -103,7 +103,7 @@
             }
         }
 
-        .card-services__title{
+        .title{
             @include mixins.flex-box($display: flex, $align: center);
             @include mixins.font($font: var.$primary-font, $size: clamp(1em, 1.2vw, 2em), $weight: 600, $space: clamp(0px, 2vw, 8px), $color: var.$highlight-color);
 
@@ -115,7 +115,7 @@
             }
         }
         
-        .card-services__text{
+        .text{
             @include mixins.flex-box($display: flex, $align: center);
             @include mixins.font($font: var.$secondary-font, $size: clamp(.5em, .5vw, 1em), $weight: 600, $space: 0px, $color: var.$black-color);
 
@@ -130,7 +130,7 @@
         }
     }
     
-    .card-services__container-info{
+    .containerInfo{
         order: 4;
         @include mixins.flex-box($display: flex, $justify: space-between);
         @include mixins.font($font: var.$secondary-font, $size: clamp(.5em, .5vw, 1em), $weight: 600, $color: var.$black-color);
@@ -139,7 +139,7 @@
         gap: var.$large-space;
         text-align: end;        
         
-        .card-services__info:nth-child(1) {
+        .containerInfo:nth-child(1) {
             @include mixins.font($weight: 900, $color: var.$secondary-color);
             animation: fade-in-bottom .3s ease-in-out forwards;
             text-align: start;
@@ -151,25 +151,24 @@
                 padding: 3px;
             }
         }        
-        .card-services__info:nth-child(2) {
+        .containerInfo:nth-child(2) {
             @include mixins.font($weight: 200, $color: var.$medium-white-color);
             animation: fade-in-bottom .5s ease-in-out forwards;
             
         }        
-        .card-services__info:nth-child(3) {
+        .containerInfo:nth-child(3) {
             @include mixins.font($weight: 200, $color: var.$medium-white-color);
             animation: fade-in-bottom .7s ease-in-out forwards;
 
-            .card-services__span-italic{
+            span{
                 font-size: clamp(.3em, 1vw, .7em);
                 font-style: italic;
-
             }
 
           }        
     }
 
-    .card-services__container-btn{
+    .containerBtn{
         height: fit-content;
         order: 5;
         @include mixins.flex-box($display: flex, $justify: space-between, $align: center);
@@ -180,11 +179,11 @@
 
        
         
-        .card-service__link{
+        .link{
             @include mixins.flex-box($display: flex, $justify: center, $align: center);
             gap: var.$small-space;
         }
-        .card-service__link-form{
+        .form{
             padding: var.$small-space;
             transition: .3s;
 
@@ -195,7 +194,7 @@
                 background-color: var.$highlight-color;
             }
         }
-        .card-service__link-modal{  
+        .modal{  
             padding: var.$small-space;
             transition: .3s;
             border-bottom: solid .3em transparent;
@@ -208,7 +207,7 @@
     }
 }
 
-.card-services__star{
+.star{
     order: 6;
     width: 60%;
     bottom: -10%;

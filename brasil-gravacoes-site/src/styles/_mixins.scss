@@ -3,7 +3,7 @@
 
 @mixin flex-box ($display:null, $direction:null, $justify:null, $align:null) {
     $properties: (
-        display: $display,
+        display: flex,
         flex-direction: $direction,
         justify-content: $justify,
         align-items: $align

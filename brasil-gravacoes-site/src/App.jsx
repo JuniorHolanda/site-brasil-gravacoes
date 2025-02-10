@@ -2,7 +2,7 @@ import Header from './components/MainHeader.jsx';
 import Hero from './components/HeroSection';
 import Services from './components/ServiceSection';
 import AboutUs from './components/AboutUsSection';
-import FormSection from './components/forms/FormSection.jsx';
+import FormSection from './components/FormSection';
 
 function App() {
   return (

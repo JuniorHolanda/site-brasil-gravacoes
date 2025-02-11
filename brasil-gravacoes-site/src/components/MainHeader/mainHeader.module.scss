@@ -1,30 +1,30 @@
-@use '../variables' as var;
-@use '../mixins';
+@use '../../styles/variables' as var;
+@use '../../styles/mixins';
 
-.main-header{
+.mainHeader{
     @include mixins.flex-box ($display: flex, $justify: space-between, $align: center );
     padding: clamp(30px, 5vw, 100px);
     position: relative;
 
     height: 20vh;
     width: 100%;
-    background-color: var.$highlight-color;
+    background-color: var.$white-color;
 
-    .main-header__container-logo{
+    div{
         @include mixins.flex-box ($display: flex, $justify: center, $align: center );
         flex-grow: 1;
         max-width: fit-content;
 
-        .main-header__main-logo{
+        img{
             width: clamp(150px, 15vw, 250px);
         }
     }
 
-    .main-header__container-hamburguer{
+    .containerHamburger{
         @include mixins.flex-box ($display: none, $direction: column);
         gap: 7px;
 
-        .item-hamburguer{
+        span{
             @include mixins.flex-box ($display: flex);
             width: 35px;
             height: 5px;
@@ -32,15 +32,16 @@
         }
     }
 
-    .main-header__nav-bar{
+    nav{
         @include mixins.flex-box ($display: flex);
         width: 100%;
+        
 
-        .main-header__list-menu{
+        ul{
             @include mixins.flex-box ($display: flex, $justify: space-between);
             width: 100%;
             
-            .main-header__item-menu{
+            li{
                 @include mixins.flex-box ($display: flex);
                 @include mixins.font(var.$secondary-font, clamp(.5em, 1vw, 1em), 400, var.$white-color); //font, size, weight, color 
                 padding: var.$small-space;
@@ -94,7 +95,7 @@
             }
         }
         
-        .main-header__nav-bar--active{
+        .navBarActive{
             @include mixins.font($size: 1.3em);
             background-color: var.$highlight-color;
             transform: translateX(0);

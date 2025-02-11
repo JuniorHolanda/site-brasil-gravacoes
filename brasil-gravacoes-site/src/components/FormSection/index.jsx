@@ -27,7 +27,6 @@ function FormSection() {
       </section>
     </section>
   )
-
 }
 
 export default FormSection;

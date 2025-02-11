@@ -1,4 +1,4 @@
-import Header from './components/MainHeader.jsx';
+import Header from './components/MainHeader/index.jsx';
 import Hero from './components/HeroSection';
 import Services from './components/ServiceSection';
 import AboutUs from './components/AboutUsSection';

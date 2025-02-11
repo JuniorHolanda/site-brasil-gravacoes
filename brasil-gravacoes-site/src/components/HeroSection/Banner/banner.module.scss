@@ -5,7 +5,7 @@
     @include mixins.flex-box($display: flex, $justify: center, $align: center);
     position: relative;
     width: 50%;
-    background-color: var.$primary-color;
+    background-color: var.$highlight-color;
 
     div{
         @include mixins.flex-box($display: flex, $justify: center, $align: center);

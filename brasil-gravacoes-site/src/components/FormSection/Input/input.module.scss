@@ -1,6 +1,9 @@
 @use '../../../styles/mixins';
 @use '../../../styles/variables' as var;
 
+img{
+  width: 200px;
+}
 label{
   @include mixins.flex-box($direction: column, $justify: center, $align: center);
   @include mixins.font($font: var.$secondary-font, $size: var.$text, $color: var.$thirt-color);

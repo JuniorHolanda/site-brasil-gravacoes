@@ -1,0 +1,24 @@
+@use '../../../styles/mixins';
+@use '../../../styles/variables' as var;
+
+label{
+  @include mixins.flex-box($direction: column, $justify: center, $align: center);
+  @include mixins.font($font: var.$secondary-font, $size: var.$text, $color: var.$thirt-color);
+  width: 300px;
+  height: 200px;
+  color: var.$secondary-color;
+  border: solid var.$medium-border;
+  cursor: pointer;
+  transition: .3s;
+
+  &:hover{
+    color: var.$thirt-color;
+  }
+  
+  .icon{
+    font-size: 3em;
+  }
+  input{
+    display: none;
+  }
+}

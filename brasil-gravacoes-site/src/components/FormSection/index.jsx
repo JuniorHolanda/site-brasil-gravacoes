@@ -1,8 +1,10 @@
 import styles from './formSection.module.scss';
-import { useEffect, useState } from 'react';
-import { RiFileUploadLine } from "react-icons/ri";
+import Input from './Input';
 
 function FormSection() {
+
+
+
   return(
     <section className={styles.wrapper}>
       <header className={styles.header}>
@@ -12,16 +14,8 @@ function FormSection() {
       <section>
         <div className={styles.containerForm}>
           <div className={styles.inputImg}>
-            <label>
-              <RiFileUploadLine className={styles.icon}/>
-              Eviar Layout
-              <input type="file"/>
-            </label>
-            <label>
-              <RiFileUploadLine className={styles.icon}/>
-              Eviar Logo
-              <input type="file"/>
-            </label>
+            <Input labelTitle='Enviar Layout'/>
+            <Input labelTitle='Enviar logo'/>
           </div>
         </div>
       </section>

@@ -89,7 +89,7 @@ function CardServices(
             </div>
 
             {expandCard && (
-                <img className={styles.star} src='../public/img/misc/star.svg' alt='Uma estrela de 8 pontas'></img> 
+                <img className={styles.star} src='../img/misc/star.svg' alt='Uma estrela de 8 pontas'></img> 
             )}
         </div>
     );

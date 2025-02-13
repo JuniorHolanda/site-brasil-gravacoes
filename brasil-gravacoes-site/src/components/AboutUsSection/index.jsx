@@ -14,7 +14,7 @@ const AboutUs = () => {
                 </p>
             </div>
             <div className={styles.imgContainer}>
-                <img src="/public/img/misc/silk-1.gif" alt="um pote de tinta serigrafica pink"/>
+                <img src="/img/misc/silk-1.gif" alt="um pote de tinta serigrafica pink"/>
             </div>
             <div className={styles.companyPrinciples}>
                 <div className={styles.itens}>
@@ -45,7 +45,7 @@ const AboutUs = () => {
                 </ul>
             </div>
             <div className={styles.star}>
-                <img alt="" src="/public/img/misc/star.svg"/>
+                <img alt="" src="/img/misc/star.svg"/>
             </div>
         </section>
     )
